@@ -4,6 +4,31 @@ const toggleMenu = document.getElementById('toggle-menu')
 const btnExit = document.getElementById('exit')
 const btnNavMenuOpenSideBar = document.getElementById('nav-toggle-button')
 const sideBarMenu = document.getElementById('nav-toggle-menu')
+const adsCircle = document.getElementsByClassName('partner')
+
+// Меняем местами рекламу в блоке
+function adsCircleSwaper () {
+    if (!adsCircle[3].hidden){
+        adsCircle[0].hidden = false
+        adsCircle[1].hidden = false
+        adsCircle[2].hidden = false
+        adsCircle[3].hidden = true
+        adsCircle[4].hidden = true
+        adsCircle[5].hidden = true
+    }else {
+        adsCircle[0].hidden = true
+        adsCircle[1].hidden = true
+        adsCircle[2].hidden = true
+        adsCircle[3].hidden = false
+        adsCircle[4].hidden = false
+        adsCircle[5].hidden = false
+    }
+    setTimeout(adsCircleSwaper, 10 * 1000)
+}
+
+if (window.innerWidth <= 480) adsCircleSwaper()
+// Меняем местами рекламу в блоке
+
 
 
 
@@ -57,5 +82,6 @@ function toggleCategoriesDropdown (event) {
     const toggle = event.target.closest('.cat-item').querySelector('.cat-item-dropDown')
     if(toggle) toggle.hidden = !toggle.hidden
 }
+
 
 

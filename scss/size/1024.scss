@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1024px) {
+    nav {
+        grid-template-columns: 1fr 2fr 3fr 4fr;
+        padding: .5rem 0;
+    }
+
+    .container {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    .publications{
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        .publication {
+            margin: 1rem;
+    
+            .description {
+                .footer {
+                    .user {
+                        .avatar {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

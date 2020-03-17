@@ -1,0 +1,22 @@
+@media only screen and (max-width: 1280px) {
+    nav {
+        grid-template-columns: 1fr 3fr 3fr 5fr;
+
+    }
+    .nav{
+        &-item-add {
+            display: none;
+        }
+    }
+
+    .cat-items {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .partners {
+        .partner {
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+}

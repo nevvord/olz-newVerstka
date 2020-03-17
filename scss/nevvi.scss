@@ -1,0 +1,122 @@
+@import "./value.scss";
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.m-0auto {
+    margin: 0 auto;
+}
+
+
+
+
+@each $name,
+$padding in $paddings {
+    .p-#{$name} {
+        padding: $padding;
+    }
+
+    .py-#{$name} {
+        padding-top: $padding;
+        padding-bottom: $padding;
+    }
+
+    .px-#{$name} {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+
+    .pl-#{$name} {
+        padding-left: $padding;
+    }
+
+    .pr-#{$name} {
+        padding-right: $padding;
+    }
+
+    .pt-#{$name} {
+        padding-top: $padding;
+    }
+
+    .pb-#{$name} {
+        padding-bottom: $padding;
+    }
+
+    .m-#{$name} {
+        margin: $padding;
+    }
+
+    .my-#{$name} {
+        margin-top: $padding;
+        margin-bottom: $padding;
+    }
+
+    .mx-#{$name} {
+        margin-left: $padding;
+        margin-right: $padding;
+    }
+
+    .ml-#{$name} {
+        margin-left: $padding;
+    }
+
+    .mr-#{$name} {
+        margin-right: $padding;
+    }
+
+    .mt-#{$name} {
+        margin-top: $padding;
+    }
+
+    .mb-#{$name} {
+        margin-bottom: $padding;
+    }
+}
+
+@each $name, $size in $paddings {
+    .fs-#{$name} {
+        font-size: $size;
+    }
+}
+
+@each $name, $color in $colors {
+    .color-#{$name} {
+        color: $color;
+    }
+    .bg-#{$name} {
+        background-color: $color;
+    }
+}
+@each $name, $width in $width {
+    .w-#{$name} {
+        width: $width;
+    }
+}
+
+.border {
+    border: $border; 
+}
+
+.border-t {
+    border-top: $border;
+}
+.border-b {
+    border-bottom: $border;
+}
+
+.border-radius {
+    border-radius: 4px;
+}
+
+.bs-green{
+    box-shadow: 0 0 4px rgba(  map-get($map: $colors, $key: green), 0.6 );
+}
+
+@each $name, $color in $colors {
+    .border-color-#{$name} {
+        border-color: $color;
+    }
+}

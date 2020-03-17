@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
 </head>
+
 <body>
   <div id="nav-toggle-menu">
+    <!-- Выпадающае меню с лева для мобилы -->
+    <div class="sideBar-menu-item">Тарифы</div>
+    <div class="sideBar-menu-item">Помощь</div>
+    <div class="sideBar-menu-item">Контакты</div>
     <div class="sideBar-menu-item"><i class="fas fa-newspaper"></i> Мои объявления </div>
     <div class="sideBar-menu-item"><i class="fas fa-coins"></i> Мои пакеты </div>
     <div class="sideBar-menu-item"><i class="fas fa-wrench"></i> Настройки </div>
     <div class="sideBar-menu-item" id="exit"><i class="fas fa-sign-out-alt"></i> Выход</div>
   </div>
   <nav>
+    <!-- Шапка сайта -->
     <div class="nav-toggle-button" id="nav-toggle-button"><i class="fas fa-bars"></i></div>
-      <div class="nav-logo">
-        <div>O</div>
-        <div class="nav-logo-green">L</div>
-        <div>Z</div>
-      </div>
+    <div class="nav-logo m-0auto">
+      <div>O</div>
+      <div class="nav-logo-green">L</div>
+      <div>Z</div>
+    </div>
 
-
-      <div class="nav-items  ml-1">
+    <div class="hidden-block">
+      <div class="nav-items m-0auto">
         <div class="nav-item">Тарифы</div>
         <div class="nav-item">Помощь</div>
         <div class="nav-item">Контакты</div>
       </div>
+    </div>
+    <div class="hidden-block-480">
       <div class="nav-items nav-item-searh">
-        <form action="submite" class="nav-form-search w-100 mx-1">
-          <input type="text" name="search" id="search" placeholder="Найти аренду..." class="nav-search-input">
+        <form action="submite" class="nav-form-search w-100 m-0auto mx-1">
+          <input type="text" name="search" id="search" placeholder="Найти аренду..." class="nav-search-input w-100">
           <button type="submit" class="nav-search-btn"><i class="fas fa-search bg-none"></i></button>
         </form>
-    
       </div>
+    </div>
+    <div class="hidden-block">
       <div class="nav-items ml-1">
         <div class="nav-item-add">
           <div class="bg-left"></div>
@@ -42,7 +52,7 @@
             <b>+</b> Подать объявление
           </div>
         </div>
-        <div class="nav-item ml-1" id="login" >
+        <div class="nav-item ml-1" id="login">
           <i class="fas fa-sign-in-alt"></i>
           Личный кабинет
         </div>
@@ -52,143 +62,285 @@
               <div class="avatar"></div>
               <div class="user-name">Big Baby <i class="fas fa-caret-down"></i></div>
             </div>
-            <di   v class="toggle-menu" id="toggle-menu" hidden>
+            <di v class="toggle-menu" id="toggle-menu" hidden>
               <div class="toggle-menu-item"><i class="fas fa-newspaper"></i> Мои объявления </div>
               <div class="toggle-menu-item"><i class="fas fa-coins"></i> Мои пакеты </div>
               <div class="toggle-menu-item"><i class="fas fa-wrench"></i> Настройки </div>
               <div class="toggle-menu-item" id="exit"><i class="fas fa-sign-out-alt"></i> Выход</div>
             </di>
           </div>
-
         </div>
       </div>
-      <div class="small-login" hidden><i class="far fa-user"></i></div>
-    
-
+    </div>
+    <div class="small-login color-white m-0auto" hidden><i class="far fa-user"></i></div>
   </nav>
-  <div class="freePlaceUnderHeader"></div>
+  <div class="freePlaceUnderHeader"></div> <!-- Опускает основной сайт под шапку -->
   <div class="container bg-light py-1">
+    <!-- Категории -->
     <div class="communication">
-      <i class="fas fa-anchor"></i>
+      <i class="fas fa-anchor my-1"></i>
       Теперь ты знаеш по чем в Oдессе рубироид!
     </div>
-    <div class="categories"><div class="categories">
-      <div class="cat-items">
-          <div class="cat-item">
-              <div class="item" onclick="toggleCategoriesDropdown(event)">
-                  <span class="cat-item-icon"><i class="fas fa-briefcase"></i></span>
-                  <span>Услуги</span>
-              </div>
-          </div>
-          <div class="cat-item">
-              <div class="item" onclick="toggleCategoriesDropdown(event)">
-                  <span class="cat-item-icon"><i class="far fa-building"></i></span>
-                  <span>Аренда недвижемости</span>
-              </div>
-              <div class="cat-item-dropDown" hidden>
-                <div class="cat-item-dropDown-item">
-                    Зимний инвентарь
-                </div>
-                <a href="http://google.com">
-                <div class="cat-item-dropDown-item">
-                    Турестический инвентар
-                </div>
-                <div class="cat-item-dropDown-item">
-                    Турестический инвентар
-                </div>
-                <div class="cat-item-dropDown-item">
-                    Турестический инвентар
-                </div>
-                </a>
-              </div>
-          </div>
+    <div class="categories">
+      <div class="categories">
+        <div class="cat-items">
           <div class="cat-item">
             <div class="item" onclick="toggleCategoriesDropdown(event)">
-                <span class="cat-item-icon"><i class="fas fa-car"></i></span>
-                <span>Аренда транспорта</span>
+              <span class="cat-item-icon"><i class="fas fa-briefcase"></i></span>
+              <span>Услуги</span>
             </div>
           </div>
           <div class="cat-item">
-              <div class="item" onclick="toggleCategoriesDropdown(event)">
-                  <span class="cat-item-icon"><i class="fas fa-magnet"></i></span>
-                  <span>Аренда оборудования</span>
+            <div class="item" onclick="toggleCategoriesDropdown(event)">
+              <span class="cat-item-icon"><i class="far fa-building"></i></span>
+              <span>Аренда недвижИмости</span>
+            </div>
+            <div class="cat-item-dropDown" hidden>
+              <div class="cat-item-dropDown-item">
+                Зимний инвентарь
               </div>
+              <a href="http://google.com">
+                <div class="cat-item-dropDown-item">
+                  Турестический инвентар
+                </div>
+                <div class="cat-item-dropDown-item">
+                  Турестический инвентар
+                </div>
+                <div class="cat-item-dropDown-item">
+                  Турестический инвентар
+                </div>
+              </a>
+            </div>
           </div>
           <div class="cat-item">
-              <div class="item" onclick="toggleCategoriesDropdown(event)">
-                  <span class="cat-item-icon"><i class="fas fa-plug"></i></span>
-                  <span>Аренда электроники</span>
-              </div>
+            <div class="item" onclick="toggleCategoriesDropdown(event)">
+              <span class="cat-item-icon"><i class="fas fa-car"></i></span>
+              <span>Аренда транспорта</span>
+            </div>
           </div>
           <div class="cat-item">
-              <div class="item" onclick="toggleCategoriesDropdown(event)">
-                  <span class="cat-item-icon"><i class="fas fa-tshirt"></i></span>
-                  <span>Аренда одежды</span>
-              </div>
+            <div class="item" onclick="toggleCategoriesDropdown(event)">
+              <span class="cat-item-icon"><i class="fas fa-magnet"></i></span>
+              <span>Аренда оборудования</span>
+            </div>
           </div>
           <div class="cat-item">
-              <div class="item" onclick="toggleCategoriesDropdown(event)">
-                  <span class="cat-item-icon"><i class="fas fa-swimmer"></i></span>
-                  <span>Аренда спорт инвентаря</span>
+            <div class="item" onclick="toggleCategoriesDropdown(event)">
+              <span class="cat-item-icon"><i class="fas fa-plug"></i></span>
+              <span>Аренда электроники</span>
+            </div>
+          </div>
+          <div class="cat-item">
+            <div class="item" onclick="toggleCategoriesDropdown(event)">
+              <span class="cat-item-icon"><i class="fas fa-tshirt"></i></span>
+              <span>Аренда одежды</span>
+            </div>
+          </div>
+          <div class="cat-item">
+            <div class="item" onclick="toggleCategoriesDropdown(event)">
+              <span class="cat-item-icon"><i class="fas fa-swimmer"></i></span>
+              <span>Аренда спорт инвентаря</span>
+            </div>
+            <div class="cat-item-dropDown" id="categoriesDropDown" hidden>
+              <div class="cat-item-dropDown-item">
+                Зимний инвентарь
               </div>
-              <div class="cat-item-dropDown" id="categoriesDropDown" hidden>
-                  <div class="cat-item-dropDown-item">
-                      Зимний инвентарь
-                  </div>
-                  <a href="http://google.com">
-                  <div class="cat-item-dropDown-item">
-                          Турестический инвентар
-                      </div>
-                  </a>
-              </div>
+              <a href="http://google.com">
+                <div class="cat-item-dropDown-item">
+                  Турестический инвентар
+                </div>
+              </a>
+            </div>
           </div>
           <div class="cat-item" onclick="toggleCategoriesDropdown(event)">
-              <div class="item">
-                  <span class="cat-item-icon"><i class="fas fa-hotel"></i></span>
-                  <span>Покупка недвижемости</span>    
-              </div>
+            <div class="item">
+              <span class="cat-item-icon"><i class="fas fa-hotel"></i></span>
+              <span>Покупка недвижемости</span>
+            </div>
           </div>
           <div class="cat-item" onclick="toggleCategoriesDropdown(event)">
-              <div class="item">
-                  <span class="cat-item-icon"><i class="fas fa-otter"></i></span>
-                  <span>Прочее</span>
-              </div>
+            <div class="item">
+              <span class="cat-item-icon"><i class="fas fa-otter"></i></span>
+              <span>Прочее</span>
+            </div>
           </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-  <div class="container bg-light">
-    <div class="partners-title">
-      Таки есть на что посмотреть
-        <!-- <a href="/more">Больше популярных</a> -->
+  <div>
+    <!-- Реклама -->
+    <div class="container bg-light">
+      <div class="partners-title">
+        Таки есть на что посмотреть
+      </div>
     </div>
-</div>
-<div class="container py-1">
-    <div class="partners">
+    <div class="container py-2">
+      <div class="partners">
         <a href="http://google.com/" alt="hi" class="partner" style="background-image: url(/src/nike.jpg);">
-            <!-- <p>550грн</p> -->
+
         </a>
         <div class="partner" style="background-image: url(/src/xiaomi.png);">
-            <!-- <p>550грн</p> -->
         </div>
         <div class="partner" style="background-image: url(/src/apple.png);">
-            <!-- <p>550грн</p> -->
         </div>
         <div class="partner" style="background-image: url(/src/ps4.jpg);">
-            <!-- <p>550грн</p> -->
         </div>
         <div class="partner" style="background-image: url(/src/guitar.jpg);">
-            <!-- <p>550грн</p> -->
         </div>
         <div class="partner" style="background-image: url(/src/dress.jpeg);">
-            <!-- <p>550грн</p> -->
         </div>
+      </div>
     </div>
-</div>
+  </div>
+  <div class="container mt-1 mb-4">
+    <!-- Блок объявлений -->
+    <div class="publications-title color-green fs-15 border-b border-color-green">Топ объявлений</div>
+    <div href="https://goggle.com" class="publications">
+      <div class="publication  bs-green p-05 border border-color-green border-radius">
+        <div class="publication-head"><!-- Картинка, цена, количество изображений -->
+          <img class="w-100" src="./src/dress.jpeg" alt="dress">
+          <div class="images p-05 bg-blue color-white border-radius"><i class="far fa-image"></i><span class="
+            quantity pl-05">3</span></div>
+            <div class="cost bg-orange p-05 border-radius color-white"> 150grn</div>
+            <div class="top bg-green p-05 border-radius color-light"><i class="fas fa-crown mr-05 color-warning"></i>ТОП</div>
+          </div>
+        <div class="description">
+          <div class="adress border-b border-color-light my-05 color-blue"><i class="fas fa-map-marker-alt color-warning mr-05"></i><span class="text">Одесская область, г.Одесса, Д.Донского , 55</span></div>
+          <div class="title color-black">
+            Дом, 1 этаж, 3 комнаты. Площадь участка 2 сотки. Планировка комнат смежно-раздельная. Общее состояние дома - хорошее состояние. Срочно.
+          </div>
+          <div class="footer my-05 border-t border-color-light pt-05">
+            <div class="user">
+              <div class="avatar"></div>
+              <div class="user-name p-05">Big Baby</div>
+            </div>
+            <div class="date p-05"><i class="far fa-calendar-alt"></i><span class="date-num">16.03.2019</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="publication bs-green p-05 border border-color-green border-radius">
+        <div class="publication-head"><!-- Картинка, цена, количество изображений -->
+          <img class="w-100" src="./src/dress.jpeg" alt="dress">
+          <div class="images p-05 bg-blue color-white border-radius"><i class="far fa-image"></i><span class="
+            quantity pl-05">3</span></div>
+            <div class="cost bg-orange p-05 border-radius color-white"> 150grn</div>
+            <div class="top bg-green p-05 border-radius color-light"><i class="fas fa-crown mr-05 color-warning"></i>ТОП</div>
+          </div>
+        <div class="description">
+          <div class="adress border-b border-color-light my-05 color-blue"><i class="fas fa-map-marker-alt color-warning mr-05"></i><span class="text">Одесская область, г.Одесса, Д.Донского , 55</span></div>
+          <div class="title color-black">
+            Дом, 1 этаж, 3 комнаты. Площадь участка 2 сотки. Планировка комнат смежно-раздельная. Общее состояние дома - хорошее состояние. Срочно.
+          </div>
+          <div class="footer my-05 border-t border-color-light pt-05">
+            <div class="user">
+              <div class="avatar"></div>
+              <div class="user-name p-05">Big Baby</div>
+            </div>
+            <div class="date p-05"><i class="far fa-calendar-alt"></i><span class="date-num">16.03.2019</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="publication bs-green p-05 border border-color-green border-radius">
+        <div class="publication-head"><!-- Картинка, цена, количество изображений -->
+          <img class="w-100" src="./src/dress.jpeg" alt="dress">
+          <div class="images p-05 bg-blue color-white border-radius"><i class="far fa-image"></i><span class="
+            quantity pl-05">3</span></div>
+            <div class="cost bg-orange p-05 border-radius color-white"> 150grn</div>
+            <div class="top bg-green p-05 border-radius color-light"><i class="fas fa-crown mr-05 color-warning"></i>ТОП</div>
+          </div>
+        <div class="description">
+          <div class="adress border-b border-color-light my-05 color-blue"><i class="fas fa-map-marker-alt color-warning mr-05"></i><span class="text">Одесская область, г.Одесса, Д.Донского , 55</span></div>
+          <div class="title color-black">
+            Дом, 1 этаж, 3 комнаты. Площадь участка 2 сотки. Планировка комнат смежно-раздельная. Общее состояние дома - хорошее состояние. Срочно.
+          </div>
+          <div class="footer my-05 border-t border-color-light pt-05">
+            <div class="user">
+              <div class="avatar"></div>
+              <div class="user-name p-05">Big Baby</div>
+            </div>
+            <div class="date p-05"><i class="far fa-calendar-alt"></i><span class="date-num">16.03.2019</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="publication bs-green p-05 border border-color-green border-radius">
+        <div class="publication-head"><!-- Картинка, цена, количество изображений -->
+          <img class="w-100" src="./src/dress.jpeg" alt="dress">
+          <div class="images p-05 bg-blue color-white border-radius"><i class="far fa-image"></i><span class="
+            quantity pl-05">3</span></div>
+            <div class="cost bg-orange p-05 border-radius color-white"> 150grn</div>
+            <div class="top bg-green p-05 border-radius color-light"><i class="fas fa-crown mr-05 color-warning"></i>ТОП</div>
+          </div>
+        <div class="description">
+          <div class="adress border-b border-color-light my-05 color-blue"><i class="fas fa-map-marker-alt color-warning mr-05"></i><span class="text">Одесская область, г.Одесса, Д.Донского , 55</span></div>
+          <div class="title color-black">
+            Дом, 1 этаж, 3 комнаты. Площадь участка 2 сотки. Планировка комнат смежно-раздельная. Общее состояние дома - хорошее состояние. Срочно.
+          </div>
+          <div class="footer my-05 border-t border-color-light pt-05">
+            <div class="user">
+              <div class="avatar"></div>
+              <div class="user-name p-05">Big Baby</div>
+            </div>
+            <div class="date p-05"><i class="far fa-calendar-alt"></i><span class="date-num">16.03.2019</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-1  bg-light">
+    <!-- Блок объявлений -->
+    <div class="publications-title color-blue fs-15 border-b border-color-blue pt-1">
+      Самые свежие
+    </div>
+    <div href="https://goggle.com" class="publications">
+      <div class="publication bg-white bs-green p-05 border border-color-green border-radius">
+        <div class="publication-head"><!-- Картинка, цена, количество изображений -->
+          <img class="w-100" src="./src/dress.jpeg" alt="dress">
+          <div class="images p-05 bg-blue color-white border-radius"><i class="far fa-image"></i><span class="
+            quantity pl-05">3</span></div>
+            <div class="cost bg-orange p-05 border-radius color-white"> 150grn</div>
+            <div class="top bg-green p-05 border-radius color-light"><i class="fas fa-crown mr-05 color-warning"></i>ТОП</div>
+          </div>
+        <div class="description">
+          <div class="adress border-b border-color-light my-05 color-blue"><i class="fas fa-map-marker-alt color-warning mr-05"></i><span class="text">Одесская область, г.Одесса, Д.Донского , 55</span></div>
+          <div class="title color-black">
+            Дом, 1 этаж, 3 комнаты. Площадь участка 2 сотки. Планировка комнат смежно-раздельная. Общее состояние дома - хорошее состояние. Срочно.
+          </div>
+          <div class="footer my-05 border-t border-color-light pt-05">
+            <div class="user">
+              <div class="avatar"></div>
+              <div class="user-name p-05">Big Baby</div>
+            </div>
+            <div class="date p-05"><i class="far fa-calendar-alt"></i><span class="date-num">16.03.2019</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="publication bg-white p-05 border border-color-blue border-radius">
+        <div class="publication-head"><!-- Картинка, цена, количество изображений -->
+          <img class="w-100" src="./src/dress.jpeg" alt="dress">
+          <div class="images p-05 bg-blue color-white border-radius"><i class="far fa-image"></i><span class="
+            quantity pl-05">3</span></div>
+            <div class="cost bg-orange p-05 border-radius color-white"> 150grn</div>
+          </div>
+        <div class="description">
+          <div class="adress border-b border-color-light my-05 color-blue"><i class="fas fa-map-marker-alt color-warning mr-05"></i><span class="text">Одесская область, г.Одесса, Д.Донского , 55</span></div>
+          <div class="title color-black">
+            Дом, 1 этаж, 3 комнаты. Площадь участка 2 сотки. Планировка комнат смежно-раздельная. Общее состояние дома - хорошее состояние. Срочно.
+          </div>
+          <div class="footer my-05 border-t border-color-light pt-05">
+            <div class="user">
+              <div class="avatar"></div>
+              <div class="user-name p-05">Big Baby</div>
+            </div>
+            <div class="date p-05"><i class="far fa-calendar-alt"></i><span class="date-num">16.03.2019</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-<script src="/js/main.js"></script>
-<script src="https://kit.fontawesome.com/b194ce6fcf.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="https://kit.fontawesome.com/b194ce6fcf.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,33 @@
+@media only screen and (max-width: 768px) {
+  nav {
+    grid-template-columns: 1fr 1fr 10fr;
+  }
+  nav .nav-toggle-button {
+    display: block;
+  }
+
+  .hidden-block {
+    display: none;
+  }
+
+  .nav-form-search {
+    display: none;
+  }
+  .nav-toggle-button {
+    display: block;
+    margin: 0 1rem;
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .nav-toggle-button:hover {
+    color: white;
+  }
+  .nav-item-searh {
+    display: none;
+    margin-left: 2rem;
+  }
+  .nav #login {
+    display: none;
+  }
+}
