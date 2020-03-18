@@ -114,6 +114,9 @@ $padding in $paddings {
 .bs-green{
     box-shadow: 0 0 4px rgba(  map-get($map: $colors, $key: green), 0.6 );
 }
+.box-shadow{
+    box-shadow: 0 0 4px rgba(  map-get($map: $colors, $key: black), 0.6 );
+}
 
 @each $name, $color in $colors {
     .border-color-#{$name} {

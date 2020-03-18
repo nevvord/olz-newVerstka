@@ -98,7 +98,7 @@ nav {
                     border-radius: 3px 0 0 3px;
                     background: linear-gradient(to left, map-get($colors, green) 50%, rgba(255, 0, 0, 0) 50%);
                     background-size: 200%;
-                    background-position-x: 200%;
+                    background-position-x: 199%;
                     transform: scaleX(-1);
                     transition: .5s;
                     height: 80%;
@@ -326,7 +326,7 @@ nav {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     .publication {
-        cursor: pointer;
+        // cursor: pointer;
         margin: 1rem;
         transition: .3s;
 
@@ -337,6 +337,8 @@ nav {
 
         &-head {
             position: relative;
+            display: block;
+            cursor: pointer;
 
             .images {
                 position: absolute;
@@ -393,6 +395,10 @@ nav {
                     }
                     &-name {
                         font-size: .8rem;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
                 .date {
@@ -401,6 +407,57 @@ nav {
                 }
             }
         }
+    }
+}
+
+.breadcrumb {
+    display: flex;
+    .dot {
+        vertical-align: bottom;
+        font-size: 1.5rem;
+        color: rgba(map-get($map: $colors, $key: blue ), .6);
+        margin: 0 .5rem;
+    }
+    .crumb {
+        cursor: pointer;
+        font-size: .8rem;
+        font-weight: 600;
+        margin: auto 0;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.open-publication {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .images {
+        border-right: 1px solid #999;
+        .show {
+            text-align: center;
+            .img {
+                width: 100%;
+            }
+        }
+        .pick {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            vertical-align: middle;
+            img {
+                background: white;
+                cursor: pointer;
+                width: 60%;
+                margin-top: auto;
+                margin-bottom: auto;
+                &:hover {
+                    border-color: rgb(128, 128, 128);
+                }
+            }
+        }
+    }
+    .description {
+
     }
 }
 

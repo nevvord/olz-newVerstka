@@ -428,6 +428,10 @@
   box-shadow: 0 0 4px rgba(139, 195, 74, 0.6);
 }
 
+.box-shadow {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
 .border-color-black {
   border-color: #000;
 }
@@ -551,7 +555,7 @@ nav .nav-items .nav-item-add .bg-right {
   border-radius: 3px 0 0 3px;
   background: linear-gradient(to left, #8BC34A 50%, rgba(255, 0, 0, 0) 50%);
   background-size: 200%;
-  background-position-x: 200%;
+  background-position-x: 199%;
   transform: scaleX(-1);
   transition: 0.5s;
   height: 80%;
@@ -745,7 +749,6 @@ nav .nav-items .nav-item-add:hover .bg-right {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .publications .publication {
-  cursor: pointer;
   margin: 1rem;
   transition: 0.3s;
 }
@@ -755,6 +758,8 @@ nav .nav-items .nav-item-add:hover .bg-right {
 }
 .publications .publication-head {
   position: relative;
+  display: block;
+  cursor: pointer;
 }
 .publications .publication-head .images {
   position: absolute;
@@ -803,11 +808,61 @@ nav .nav-items .nav-item-add:hover .bg-right {
 .publications .publication .description .footer .user-name {
   font-size: 0.8rem;
 }
+.publications .publication .description .footer .user-name:hover {
+  text-decoration: underline;
+}
 .publications .publication .description .footer .date {
   font-size: 0.8rem;
   margin: 0 0 0 auto;
 }
 
+.breadcrumb {
+  display: flex;
+}
+.breadcrumb .dot {
+  vertical-align: bottom;
+  font-size: 1.5rem;
+  color: rgba(54, 76, 159, 0.6);
+  margin: 0 0.5rem;
+}
+.breadcrumb .crumb {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: auto 0;
+}
+.breadcrumb .crumb:hover {
+  text-decoration: underline;
+}
+
+.open-publication {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.open-publication .images {
+  border-right: 1px solid #999;
+}
+.open-publication .images .show {
+  text-align: center;
+}
+.open-publication .images .show .img {
+  width: 100%;
+}
+.open-publication .images .pick {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  vertical-align: middle;
+}
+.open-publication .images .pick img {
+  background: white;
+  cursor: pointer;
+  width: 60%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.open-publication .images .pick img:hover {
+  border-color: gray;
+}
 @media only screen and (max-width: 1280px) {
   nav {
     grid-template-columns: 1fr 3fr 3fr 5fr;

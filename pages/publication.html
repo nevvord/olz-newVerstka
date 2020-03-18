@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="nav-toggle-menu">
+        <!-- Выпадающае меню с лева для мобилы -->
+        <div class="sideBar-menu-item">Тарифы</div>
+        <div class="sideBar-menu-item">Помощь</div>
+        <div class="sideBar-menu-item">Контакты</div>
+        <div class="sideBar-menu-item"><i class="fas fa-newspaper"></i> Мои объявления </div>
+        <div class="sideBar-menu-item"><i class="fas fa-coins"></i> Мои пакеты </div>
+        <div class="sideBar-menu-item"><i class="fas fa-wrench"></i> Настройки </div>
+        <div class="sideBar-menu-item" id="exit"><i class="fas fa-sign-out-alt"></i> Выход</div>
+    </div>
+    <nav>
+        <!-- Шапка сайта -->
+        <div class="nav-toggle-button" id="nav-toggle-button"><i class="fas fa-bars"></i></div>
+        <a href="/" class="nav-logo m-0auto">
+            <div>O</div>
+            <div class="nav-logo-green">L</div>
+            <div>Z</div>
+        </a>
+
+        <div class="hidden-block">
+            <div class="nav-items m-0auto">
+                <div class="nav-item">Тарифы</div>
+                <div class="nav-item">Помощь</div>
+                <div class="nav-item">Контакты</div>
+            </div>
+        </div>
+        <div class="hidden-block-480">
+            <div class="nav-items nav-item-searh">
+                <form action="submite" class="nav-form-search w-100 m-0auto mx-1">
+                    <input type="text" name="search" id="search" placeholder="Найти аренду..."
+                        class="nav-search-input w-100">
+                    <button type="submit" class="nav-search-btn"><i class="fas fa-search bg-none"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="hidden-block">
+            <div class="nav-items ml-1">
+                <div class="nav-item-add">
+                    <div class="bg-left"></div>
+                    <div class="bg-right"></div>
+                    <div class="nav-item-add-text">
+                        <b>+</b> Подать объявление
+                    </div>
+                </div>
+                <div class="nav-item ml-1" id="login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Личный кабинет
+                </div>
+                <div class="ml-1">
+                    <div id="profile" hidden>
+                        <div class="profile">
+                            <div class="avatar"></div>
+                            <div class="user-name">Big Baby <i class="fas fa-caret-down"></i></div>
+                        </div>
+                        <di v class="toggle-menu" id="toggle-menu" hidden>
+                            <div class="toggle-menu-item"><i class="fas fa-newspaper"></i> Мои объявления </div>
+                            <div class="toggle-menu-item"><i class="fas fa-coins"></i> Мои пакеты </div>
+                            <div class="toggle-menu-item"><i class="fas fa-wrench"></i> Настройки </div>
+                            <div class="toggle-menu-item" id="exit"><i class="fas fa-sign-out-alt"></i> Выход</div>
+                        </di>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-login color-white m-0auto" hidden><i class="far fa-user"></i></div>
+    </nav>
+    <div class="freePlaceUnderHeader"></div> <!-- Опускает основной сайт под шапку -->
+    <div class="container bg-light">
+        <div class="breadcrumb pt-1 ml-1">
+            <a class="crumb ml-05">Главная</a>
+            <div class="dot">•</div>
+            <a class="crumb ml-05">Что-то</a>
+            <div class="dot">•</div>
+            <a class="crumb ml-05">То что в что-то</a>
+        </div>
+    </div>
+    <div class="container bg-light p-1">
+        <div class="open-publication p-1 bg-white  border-radius">
+            <div class="images pr-1">
+                <div class="show">
+                    <img src="../src/apple.png" alt="apple">
+                </div>
+                <div class="pick bg-light border-radius p-05 mt-05">
+                    <img class="border box-shadow border-radius border-color-light p-05 m-05" src="../src/apple.png" alt="apple">
+                    <img class="border box-shadow border-radius border-color-light p-05 m-05" src="../src/dress.jpeg" alt="apple">
+                    <img class="border box-shadow border-radius border-color-light p-05 m-05" src="../src/guitar.jpg" alt="apple">
+                    <img class="border box-shadow border-radius border-color-light p-05 m-05" src="../src/nike.jpg" alt="apple">
+                </div>
+            </div>
+            <div class="description pl-1">
+                <h2 class="color-blue"><b>Самое крутое название</b></h2>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
